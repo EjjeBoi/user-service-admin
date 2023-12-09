@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      author: 1daniil_shumkov1@mail.ru
+      id: 2023.12.6_01
+      changes:
+        - createTable:
+            tableName: users
+            remarks: Таблица пользователей
+            columns:
+              - column:
+                  name: id
+                  type: serial
+                  remarks: Идентификатор записи
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: varchar
+                  remarks: Имя пользователя
+                  constraints:
+                    nullable: false
+              - column:
+                  name: age
+                  type: integer
+                  remarks: Этап обучения
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_deleted
+                  type: boolean
+                  remarks: Пометка удаления
+                  constraints:
+                    nullable: false
